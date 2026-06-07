@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QuickBite Bot</title>
+<script src="<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+ 
+</head>
+<body>
+
+<h1>QuickBite Restaurant Bot</h1>
+
+<df-messenger
+intent="WELCOME"
+chat-title="QuickBiteBot"
+agent-id="99979b8a-c987-4501-b371-d62aae514223"
+language-code="en">
+</df-messenger>
+
+</body>
+</html>
