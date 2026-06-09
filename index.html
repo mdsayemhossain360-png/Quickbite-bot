@@ -1,20 +1,240 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-<title>QuickBite Bot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickBite Restaurant</title>
+
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
- 
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#b30000,#ff1a1a);
+min-height:100vh;
+overflow-x:hidden;
+color:white;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:bold;
+text-shadow:0 0 20px rgba(255,255,255,.4);
+animation:fadeDown 1.5s ease;
+}
+
+.hero h2{
+margin-top:15px;
+font-size:30px;
+animation:fadeUp 2s ease;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.8;
+}
+
+.food-container{
+position:relative;
+height:250px;
+margin-top:40px;
+}
+
+.food{
+position:absolute;
+font-size:80px;
+filter:drop-shadow(0 15px 20px rgba(0,0,0,.4));
+animation:float 4s ease-in-out infinite;
+}
+
+.burger{
+left:20%;
+top:20px;
+}
+
+.pizza{
+left:50%;
+top:0;
+animation-delay:1s;
+}
+
+.fries{
+left:75%;
+top:30px;
+animation-delay:2s;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0px) rotate(0deg);
+}
+50%{
+transform:translateY(-25px) rotate(8deg);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.team{
+background:white;
+color:#222;
+width:90%;
+max-width:700px;
+margin:40px auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.team h2{
+color:#d10000;
+margin-bottom:20px;
+}
+
+.team ul{
+list-style:none;
+font-size:18px;
+line-height:2;
+}
+
+.features{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:30px;
+}
+
+.card{
+background:white;
+color:#222;
+padding:25px;
+width:250px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#d10000;
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+font-size:16px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<h1>QuickBite Restaurant Bot</h1>
+<div class="hero">
+
+<h1>🍔 QuickBite Restaurant</h1>
+
+<h2>Fresh Food Delivered Fast</h2>
+
+<p>
+Welcome to QuickBite Restaurant.
+Order Burgers, Pizza, Fries and more through our AI-powered chatbot assistant.
+Fast service, delicious meals and smart ordering experience.
+</p>
+
+<div class="food-container">
+<div class="food burger">🍔</div>
+<div class="food pizza">🍕</div>
+<div class="food fries">🍟</div>
+</div>
+
+</div>
+
+<div class="features">
+
+<div class="card">
+<h3>🍔 Burgers</h3>
+<p>Premium quality juicy burgers.</p>
+</div>
+
+<div class="card">
+<h3>🍕 Pizza</h3>
+<p>Freshly baked delicious pizzas.</p>
+</div>
+
+<div class="card">
+<h3>🚚 Fast Delivery</h3>
+<p>Get your food delivered quickly.</p>
+</div>
+
+</div>
+
+<div class="team">
+
+<h2>👨‍💻 Development Team</h2>
+
+<ul>
+<li>Md. Sayem Hossain</li>
+<li>Emanuel</li>
+<li>Innocent</li>
+<li>Bary Mostafa Samsul</li>
+<li>Amin Ruhul</li>
+</ul>
+
+</div>
+
+<footer>
+© 2026 QuickBite Restaurant | AI Powered Food Ordering Assistant
+</footer>
 
 <df-messenger
 intent="WELCOME"
-chat-title="QuickBiteBot"
+chat-title="QuickBite Bot"
 agent-id="99979b8a-c987-4501-b371-d62aae514223"
-language-code="en">
-</df-messenger>
+language-code="en"> </df-messenger>
 
 </body>
 </html>
